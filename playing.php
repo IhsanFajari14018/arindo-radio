@@ -4,8 +4,7 @@
 * Please be aware. This gist requires at least PHP 5.4 to run correctly.
 * Otherwise consider downgrading the $opts array code to the classic "array" syntax.
 */
-function getMp3StreamTitle($streamingUrl, $interval, $offset = 0, $headers = true)
-{
+function getMp3StreamTitle($streamingUrl, $interval, $offset = 0, $headers = true){
   $needle = 'StreamTitle=';
   $ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36';
 
@@ -43,7 +42,8 @@ function getMp3StreamTitle($streamingUrl, $interval, $offset = 0, $headers = tru
 }
 
 $result = getMp3StreamTitle('http://1.1.1.239:8000/stream', 19200);
+echo $result;
 // var_dump($result);
-print_r($result);
+// print_r($result);
 
 ?>
