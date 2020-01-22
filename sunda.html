@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Radio Arindo</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Main Navigation-->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar">
+      <div class="container">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand font-weight-bolder" href="#">Radio Arindo</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Program</a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="index.html">Live Streaming</a>
+                <a class="dropdown-item" href="betawi.html">Betawi</a>
+                <a class="dropdown-item" href="keroncong.html">Keroncong</a>
+                <a class="dropdown-item" href="sunda.html">Sunda</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+
+          </ul>
+          <!-- Links -->
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="https://www.facebook.com/Arindo.Official/" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.youtube.com/ArindoOfficial" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.youtube.com/ArindoOfficial" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+
+  <main class="mt-5 pt-5">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-8 col-12 mb-3">
+          <!--Section: Jumbotron-->
+          <section class="card blue-gradient wow fadeIn" id="intro">
+
+            <!-- Content -->
+            <div class="card-body text-white text-center py-5 px-5 my-5">
+
+              <h1 class="mb-4">
+                <strong>Program Sunda</strong>
+              </h1>
+              <p class="mb-5 font-italic">
+                Alunan lagu-lagu sunda terbaik pilihan kami
+              </p>
+
+              <!-- Autoplay -->
+              <!-- <iframe src="http://rs-ap.id:8000/sunda?type=.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
+
+              <div class="text-center">
+                <!-- Local Music Test -->
+                <!-- <audio controls> -->
+                <!-- <source src="audio/keroncong.mp3" type="audio/mpeg"/> -->
+                <!-- Your browser does not support the audio element. -->
+                <!-- </audio> -->
+
+                <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
+                <audio controls="true" preload="none">
+                  <!-- <audio controls autoplay hidden> -->
+                  <!-- <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                  <source src="http://rs-ap.id:8000/sunda?type=.mp3" type="audio/mp3"/>
+                  <!-- <source src="http://1.1.1.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                  <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                  Your browser does not support the audio element.
+                </audio>
+                <!-- <iframe id="Frame2" scrolling="no" src="http://1.1.1.239:8000/stream"> </iframe> -->
+                <!-- END OF THE RADIO HTML5 PLAYER EMBEDDING -->
+
+              </div>
+            </div>
+            <!-- Content -->
+          </section>
+          <!--Section: Jumbotron-->
+        </div>
+
+        <!-- Twitter Embeed Information -->
+        <div class="col-md-4 col-12 mb-2">
+          <section id="twitter" class="">
+            <a class="twitter-timeline" data-lang="en" data-height="397" data-theme="light" href="https://twitter.com/RadioArindo?ref_src=twsrc%5Etfw">
+              Tweets by Radio Arindo
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </section>
+        </div>
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 fixed-bottom">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 Copyright
+      <a href="https://arindo.net/" target="_blank"> PT. Arindo Pratama </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+  // Animations initialization
+  new WOW().init();
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  setInterval(ajaxCall, 5000); //5 sec
+
+  function ajaxCall() {
+    $.ajax({
+      url : 'playing.php',
+      type : 'GET',
+      success : function (result) {
+        console.log (result); // Here, you need to use response by PHP file.
+        document.getElementById('radio_text').innerText = result;
+      },
+      error : function () {
+        console.log ('error');
+      }
+    });
+  }
+  </script>
+
+</body>
+
+</html>
