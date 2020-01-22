@@ -43,9 +43,10 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Program</a>
               <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Live Streaming</a>
-                <a class="dropdown-item" href="#">Sunda</a>
-                <a class="dropdown-item" href="#">Keroncong</a>
+                <a class="dropdown-item" href="index.html">Live Streaming</a>
+                <a class="dropdown-item" href="betawi.html">Betawi</a>
+                <a class="dropdown-item" href="keroncong.html">Keroncong</a>
+                <a class="dropdown-item" href="sunda.html">Sunda</a>
               </div>
             </li>
 
@@ -113,10 +114,16 @@
                 <!-- Your browser does not support the audio element. -->
                 <!-- </audio> -->
 
+                <!-- Autoplay for Chrome -->
+                <!-- <iframe src="http://rs-ap.id:8000/stream?type=.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
+
                 <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
                 <audio controls="true" preload="none">
-                  <!-- <source src="http://rs-ap.id/stream?type=.mp3" type="audio/mp3"/> -->
-                  <source src="http://1.1.1.239:8000/stream?type=.mp3" type="audio/mp3"/>
+                <!-- <audio controls autoplay hidden> -->
+                  <!-- <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                  <!-- <source src="http://rs-ap.id/sunda" type="audio/mp3"/> -->
+                  <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/>
+                  <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
                   Your browser does not support the audio element.
                 </audio>
                 <!-- <iframe id="Frame2" scrolling="no" src="http://1.1.1.239:8000/stream"> </iframe> -->
@@ -124,7 +131,6 @@
                   Loading ...
                 </div>
                 <!-- END OF THE RADIO HTML5 PLAYER EMBEDDING -->
-
 
               </div>
             </div>
@@ -136,8 +142,8 @@
         <!-- Twitter Embeed Information -->
         <div class="col-md-4 col-12 mb-2">
           <section id="twitter" class="">
-            <a class="twitter-timeline" data-lang="en" data-height="397" data-theme="light" href="https://twitter.com/ArindoRadio?ref_src=twsrc%5Etfw">
-              Tweets by Unpar Radio Station
+            <a class="twitter-timeline" data-lang="en" data-height="397" data-theme="light" href="https://twitter.com/RadioArindo?ref_src=twsrc%5Etfw">
+              Tweets by Radio Arindo
             </a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </section>
@@ -284,7 +290,6 @@
         error : function () {
           console.log ('error');
         }
-
       });
     }
     </script>
