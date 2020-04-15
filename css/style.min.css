@@ -17,6 +17,12 @@ html{
   background-color:#1C2331
 }
 
+.btn-rounded-edge{
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+
 @media only screen and (max-width:768px){
   .navbar{
     background-color:#1C2331
