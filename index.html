@@ -14,6 +14,8 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/audio.visualizer.css" rel="stylesheet">
 </head>
 
 <body>
@@ -98,35 +100,33 @@
           <section class="card blue-gradient wow fadeIn" id="intro">
 
             <!-- Content -->
-            <div class="card-body text-white text-center py-4 px-5 my-5">
+            <div class="card-body text-white text-center py-4 px-5 mt-5 mb-2">
 
 
               <img src="img/assets/logo-web3.png" height="200" alt="mdb logo">
               <h1 class="mb-1">
                 <!-- <strong>Radio Arindo</strong> -->
               </h1>
-              <p class="mb-5 font-italic">
+              <p class="mb-1 font-italic">
                 Mari mendengarkan lagu-lagu favorit Anda
               </p>
 
               <!-- <p class="mb-4"> Tekan tombol play dibawah ini! </p> -->
 
-              <div class="text-center">
-                <!-- Autoplay for Chrome -->
-                <!-- <iframe src="http://rs-ap.id:8000/stream?type=.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
+              <canvas id="canvas"></canvas>
 
+              <div class="text-center">
                 <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
-                <audio controls="true" preload="none">
-                  <!-- <audio controls autoplay hidden> -->
+                <audio id="audio" onplay="audio_visualizer()" controls="true" preload="none">
+                  <!-- <source src="audio/sample.mp3" type="audio/mp3"/> -->
                   <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/>
                   <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
                   Your browser does not support the audio element.
                 </audio>
                 <div id="radio_text">
-                  <!-- Loading ... -->
+                  Loading ...
                 </div>
                 <!-- END OF THE RADIO HTML5 PLAYER EMBEDDING -->
-
               </div>
             </div>
             <!-- Content -->
@@ -152,8 +152,6 @@
           </section>
 
         </div>
-
-
 
       </div>
 
@@ -370,6 +368,71 @@
         }
       });
     }
+
+    function audio_visualizer() {
+      console.log("Audio successfully visualized!")
+
+      var audio = document.getElementById("audio");
+
+      var context = new AudioContext();
+      var src = context.createMediaElementSource(audio);
+      var analyser = context.createAnalyser();
+
+      var canvas = document.getElementById("canvas");
+      canvas.width = window.innerWidth;
+      canvas.height = 300;
+      var ctx = canvas.getContext("2d");
+
+      src.connect(analyser);
+      analyser.connect(context.destination);
+
+      analyser.fftSize = 256;
+
+      var bufferLength = analyser.frequencyBinCount;
+      // console.log(bufferLength);
+
+      var dataArray = new Uint8Array(bufferLength);
+
+      var WIDTH = canvas.width;
+      var HEIGHT = canvas.height;
+
+      var barWidth = (WIDTH / bufferLength) * 2.5;
+      var barHeight;
+      var x = 0;
+
+      function renderFrame() {
+        requestAnimationFrame(renderFrame);
+
+        x = 0;
+
+        analyser.getByteFrequencyData(dataArray);
+
+        // ctx.fillStyle = "rgba(255, 255, 255, 1)";
+        // ctx.fillStyle = "#fff";
+        ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+
+        //coloring?
+        for (var i = 0; i < bufferLength; i++) {
+          barHeight = dataArray[i];
+
+          var r = 255;
+          var g = 105 + (i * 3);
+          var b = 180 + (i * 3);
+
+          ctx.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+          // ctx.fillStyle = "rgba(111, 111, 111, 0.5)";
+          ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+          x += barWidth + 1;
+        }
+
+      }
+
+      // audio.play();
+      renderFrame();
+    };
     </script>
 
   </body>
