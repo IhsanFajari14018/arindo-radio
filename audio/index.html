@@ -4,12 +4,6 @@
   <title>audio visualizer with audio element</title>
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <style>
-  #thefile {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 100;
-  }
 
   #canvas {
     position: fixed;
@@ -30,9 +24,8 @@
 </head>
 <body>
   <div id="content">
-    <!-- <input type="file" id="thefile" accept="audio/*" /> -->
     <canvas id="canvas"></canvas>
-    <audio id="audio" onplay="audio_visualizer_2()" src="sample.mp3" type="audio/mpeg" controls/>
+    <audio id="audio" onplay="audio_visualizer()" src="sample.mp3" type="audio/mpeg" controls/>
     <!-- <source src="assets/sample.mp3" type="audio/mpeg"/> -->
   </audio>
 </div>
@@ -40,21 +33,10 @@
 <script>
 
 function audio_visualizer() {
-  console.log('masuk');
-}
+  console.log("Audio successfully visualized!")
 
-// window.onload = function() {
-
-function audio_visualizer_2() {
-  // var files = document.getElementById("audio").src;
   var audio = document.getElementById("audio");
 
-  // console.log(files);
-
-  // var files = this.files;
-  // audio.src = URL.createObjectURL(files[0]);
-  // audio.load();
-  // audio.play();
   var context = new AudioContext();
   var src = context.createMediaElementSource(audio);
   var analyser = context.createAnalyser();
@@ -70,7 +52,7 @@ function audio_visualizer_2() {
   analyser.fftSize = 256;
 
   var bufferLength = analyser.frequencyBinCount;
-  console.log(bufferLength);
+  // console.log(bufferLength);
 
   var dataArray = new Uint8Array(bufferLength);
 
