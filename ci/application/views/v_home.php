@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Radio Arindo</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="<?php echo base_url('lib/css/bootstrap.min.css') ?>" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="<?php echo base_url('lib/css/mdb.min.css') ?>" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="<?php echo base_url('lib/css/style.min.css') ?>" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Main Navigation-->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar">
+      <div class="container">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">
+          <img src="<?php echo base_url('lib/img/assets/logo-web3.png') ?>" height="40" alt="radio arindo logo">
+        </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Program</a>
+              <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="index.html">Live Streaming</a>
+                <a class="dropdown-item" href="betawi.html">Betawi</a>
+                <a class="dropdown-item" href="keroncong.html">Keroncong</a>
+                <a class="dropdown-item" href="sunda.html">Sunda</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+
+          </ul>
+          <!-- Links -->
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="https://www.facebook.com/Arindo.Official/" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.youtube.com/ArindoOfficial" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.youtube.com/ArindoOfficial" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-youtube fa-lg"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5 pt-5">
+    <div class="container">
+
+      <!-- Section Radio Player + Twitter -->
+      <section>
+        <div class="row">
+          <div class="col-md-8 col-12 mb-3">
+            <!--Section: Jumbotron-->
+            <section class="card blue-gradient wow fadeIn" id="intro">
+
+              <!-- Content -->
+              <div class="card-body text-white text-center py-4 px-5 my-5">
+
+
+                <img src="<?php echo base_url('lib/img/assets/logo-web3.png') ?>" height="200" alt="radio arindo logo">
+                <h1 class="mb-1">
+                  <!-- <strong>Radio Arindo</strong> -->
+                </h1>
+
+                <p class="mb-3 font-italic">
+                  Mari mendengarkan lagu-lagu favorit Anda
+                </p>
+
+                <!-- <p class="mb-4"> Tekan tombol play dibawah ini! </p> -->
+
+                <div class="text-center">
+                  <!-- Autoplay for Chrome -->
+                  <!-- <iframe src="http://rs-ap.id:8000/stream?type=.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
+
+                  <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
+
+                  <audio id="audio" crossorigin="anonymous" onplay="audio_visualizer()" controls="true" preload="none">
+                    <!-- <audio id="audio" controls="true" preload="none"> -->
+                    <source src="audio/sample.mp3" type="audio/mp3"/>
+                    <!-- <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                    <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                    <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div id="radio_text">
+                    Loading ...
+                  </div>
+                  <!-- END OF THE RADIO HTML5 PLAYER EMBEDDING -->
+
+                </div>
+              </div>
+              <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+          </div>
+
+          <!-- Twitter Embeed Information -->
+          <div class="col-md-4 col-12 mb-2">
+            <section id="twitter" class="mb-2">
+              <a class="twitter-timeline" data-lang="en" data-height="318" data-theme="light" href="https://twitter.com/RadioArindo?ref_src=twsrc%5Etfw">
+                Tweets by Radio Arindo
+              </a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </section>
+
+            <section class="mb-3">
+              <h4 class="">Hubungi kami melalui</h4>
+              <a href="https://t.me/radioarindo" target="_blank">
+                <button class="btn btn-info btn btn-rounded-edge px-4"><i class="fab fa-telegram fa-lg mr-1"></i> Telegram</button>
+              </a>
+              <button class="btn btn-success btn btn-rounded-edge px-4" disabled><i class="fab fa-whatsapp fa-lg mr-1"></i> Coming Soon</button>
+            </section>
+          </div>
+
+        </div>
+
+        <div class="row mt-1">
+          <div class="col-md-2 col-6 rgba-black-strong btn-rounded-left p-2 offset-3">
+            <p class="white-text text-center m-0">Current Listener</p>
+          </div>
+          <div class="rgba-pink-strong btn-rounded-right py-2 mr-auto" style="width:50px">
+            <h5 id="current_listener" class="white-text text-center m-0"> .. </h5>
+          </div>
+        </div>
+      </section>
+
+      <!--Section: Cards : SPONSOR -->
+      <section class="pt-5">
+        <!-- Heading & Description -->
+        <div class="wow fadeIn">
+          <!--Section heading-->
+          <h2 class="h1 text-center mb-3">Sponsor</h2>
+          <!--Section description-->
+          <p class="text-center mb-5">
+            PT. Arindo Pratama adalah perusahaan yang
+            bergerak dalam bidang payment point online bank (PPOB),
+            yakni jasa penyediaan layanan untuk pembayaran.
+            Selain itu, kami juga memiliki produk-produk lain, berupa:
+          </p>
+          <!-- Heading & Description -->
+
+          <!--Grid row-->
+          <div class="row wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-lg-5 col-xl-4 mb-4">
+              <!--Featured image-->
+              <div class="view overlay rounded z-depth-1">
+                <img src="<?php echo base_url('lib/img/assets/arindo.png') ?>" class="img-fluid" alt="">
+                <a href="https://arindo.net" target="_blank">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+              <h3 class="mb-3 font-weight-bold dark-grey-text">
+                <strong>PPOB Arindo</strong>
+              </h3>
+              <p class="">
+                Menyediakan layanan untuk pembayaran rekening listrik, rekening telepon,
+                penjualan voucher pulsa elektronik, pembayaran leasing kendaraan sepeda motor,
+                PDAM, Pajak Bumi dan Bangunan (PBB), layanan pengiriman uang, ticketing, dll.
+              </p>
+              <!-- <p><strong>5 minutes, a few clicks and... done. You will be surprised at how easy it is.</strong></p> -->
+              <a href="https://arindo.net" target="_blank" class="btn btn-primary btn-md">
+                Pelajari Lebih Lanjut
+                <i class="fas fa-play ml-1"></i>
+              </a>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <hr class="mb-5">
+
+          <!--Grid row-->
+          <div class="row mt-3 wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-lg-5 col-xl-4 mb-4">
+              <!--Featured image-->
+              <div class="view overlay rounded z-depth-1">
+                <img src="<?php echo base_url('lib/img/assets/waserbanura.png') ?>" class="img-fluid" alt="">
+                <a href="http://waserbanura.com" target="_blank">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+              <h3 class="mb-3 font-weight-bold dark-grey-text">
+                <strong>Waserbanura</strong>
+              </h3>
+              <p class="">
+                Menyediakan pembelian sembako secara online. Pembelian bisa dilakukan dari website
+                atau dari mobile apps. Sembako yang dipesan akan langsung kami antarkan ke rumah Anda.
+              </p>
+              <a href="http://waserbanura.com" target="_blank" class="btn btn-primary btn-md">
+                Pelajari Lebih Lanjut
+                <i class="fas fa-play ml-2"></i>
+              </a>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <hr class="mb-5">
+
+          <!--Grid row-->
+          <div class="row mt-3 wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-lg-5 col-xl-4 mb-4">
+              <!--Featured image-->
+              <div class="view overlay rounded z-depth-1">
+                <img src="<?php echo base_url('lib/img/assets/kompor-1.jpg') ?>" class="img-fluid" alt="">
+                <a href="http://arindo.net/pages/informasi/?id=60" target="_blank">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+              <h3 class="mb-3 font-weight-bold dark-grey-text">
+                <strong>Kompor Listrik</strong>
+              </h3>
+              <p class="">
+                Kompor Induksi merupakan kompor dengan desain elegan yang menarik dan praktis digunakan.
+                Dapat digunakan dengan alat masak berdiameter 10-26 cm. Apapun jenis hidangan Anda; mengukus,merebus,
+                menggoreng, membuat sup dan memanaskan, SDR Induction Cooker mampu melakukan semuanya. Anda akan merasa
+                aman saat memasak dikelilingi oleh anak Anda karena tidak adanya api.
+              </p>
+              <a href="http://arindo.net/pages/informasi/?id=60" target="_blank" class="btn btn-primary btn-md">
+                Pelajari Lebih Lanjut
+                <i class="fas fa-play ml-2"></i>
+              </a>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <hr class="mb-5">
+
+          <!--Grid row-->
+          <div class="row mt-3 wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-lg-5 col-xl-4 mb-4">
+              <!--Featured image-->
+              <div class="view overlay rounded z-depth-1">
+                <img src="<?php echo base_url('lib/img/assets/motor-listrik-1.jpg') ?>" class="img-fluid" alt="">
+                <a href="http://arindo.net/pages/informasi/?id=61" target="_blank">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
+              <h3 class="mb-3 font-weight-bold dark-grey-text">
+                <strong>Motor Listrik</strong>
+              </h3>
+              <p class="">
+                Motor Listrik SDR. Memiliki daya mesin 2.500 Watt/60 cc dengan jarak tempuh hingga 60 Km.
+                Transmisi yang digunakan pada motor ini adalah automatic.
+              </p>
+              <a href="http://arindo.net/pages/informasi/?id=61" target="_blank" class="btn btn-primary btn-md">
+                Pelajari Lebih Lanjut
+                <i class="fas fa-play ml-2"></i>
+              </a>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+        </div>
+      </section>
+
+    </div>
+    <!-- END of container -->
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 Copyright
+      <a href="https://arindo.net/" target="_blank"> PT. Arindo Pratama </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="<?php echo base_url('lib/js/jquery-3.4.1.min.js') ?>"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="<?php echo base_url('lib/js/popper.min.js') ?>"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="<?php echo base_url('lib/js/bootstrap.min.js') ?>"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="<?php echo base_url('lib/js/mdb.min.js') ?>"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+  // Animations initialization
+  new WOW().init();
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script crossorigin="anonymous">
+  setInterval(currentPlaying, 5000); //5 sec
+  setInterval(currentListener, 10000); //10 sec
+
+  function currentPlaying() {
+    $.ajax({
+      url : 'http://localhost/arindo-radio/ci/index.php/Home/getCurrentPlaying',
+      type : 'GET',
+      success : function (result) {
+        console.log (result); // Here, you need to use response by PHP file.
+        document.getElementById('radio_text').innerText = result;
+      },
+      error : function () {
+        console.log ('error');
+      }
+    });
+  }
+
+  function currentListener() {
+    $.ajax({
+      url : 'http://localhost/arindo-radio/ci/index.php/Home/getCurrentListener',
+      type : 'GET',
+      success : function (result) {
+        console.log (result); // Here, you need to use response by PHP file.
+        document.getElementById('current_listener').innerText = result;
+      },
+      error : function () {
+        console.log ('error');
+      }
+    });
+  }
+
+  </script>
+
+</body>
+
+</html>
