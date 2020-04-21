@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class m_server extends CI_Model{
+class M_server extends CI_Model{
 
   var $server = "http://rs-ap.id:8000";
   var $stats_file = "/status.xsl";
