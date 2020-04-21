@@ -88,82 +88,89 @@
   <!--Main Navigation-->
 
   <!--Main layout-->
-
   <main class="mt-5 pt-5">
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-8 col-12 mb-3">
-          <!--Section: Jumbotron-->
-          <section class="card blue-gradient wow fadeIn" id="intro">
+      <!-- Section Radio Player + Twitter -->
+      <section>
+        <div class="row">
+          <div class="col-md-8 col-12 mb-3">
+            <!--Section: Jumbotron-->
+            <section class="card blue-gradient wow fadeIn" id="intro">
 
-            <!-- Content -->
-            <div class="card-body text-white text-center py-4 px-5 my-5">
+              <!-- Content -->
+              <div class="card-body text-white text-center py-4 px-5 my-5">
 
 
-              <img src="img/assets/logo-web3.png" height="200" alt="radio arindo logo">
-              <h1 class="mb-1">
-                <!-- <strong>Radio Arindo</strong> -->
-              </h1>
+                <img src="img/assets/logo-web3.png" height="200" alt="radio arindo logo">
+                <h1 class="mb-1">
+                  <!-- <strong>Radio Arindo</strong> -->
+                </h1>
 
-              <p class="mb-3 font-italic">
-                Mari mendengarkan lagu-lagu favorit Anda
-              </p>
+                <p class="mb-3 font-italic">
+                  Mari mendengarkan lagu-lagu favorit Anda
+                </p>
 
-              <!-- <p class="mb-4"> Tekan tombol play dibawah ini! </p> -->
+                <!-- <p class="mb-4"> Tekan tombol play dibawah ini! </p> -->
 
-              <div class="text-center">
-                <!-- Autoplay for Chrome -->
-                <!-- <iframe src="http://rs-ap.id:8000/stream?type=.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
+                <div class="text-center">
+                  <!-- Autoplay for Chrome -->
+                  <!-- <iframe src="http://rs-ap.id:8000/stream?type=.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
 
-                <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
+                  <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
 
-                <audio id="audio" crossorigin="anonymous" onplay="audio_visualizer()" controls="true" preload="none">
-                <!-- <audio id="audio" controls="true" preload="none"> -->
-                  <source src="audio/sample.mp3" type="audio/mp3"/>
-                  <!-- <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/> -->
-                  <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
-                  <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
-                  Your browser does not support the audio element.
-                </audio>
-                <div id="radio_text">
-                  <!-- Loading ... -->
+                  <audio id="audio" crossorigin="anonymous" onplay="audio_visualizer()" controls="true" preload="none">
+                    <!-- <audio id="audio" controls="true" preload="none"> -->
+                    <source src="audio/sample.mp3" type="audio/mp3"/>
+                    <!-- <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                    <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                    <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                    Your browser does not support the audio element.
+                  </audio>
+                  <div id="radio_text">
+                    Loading ...
+                  </div>
+                  <!-- END OF THE RADIO HTML5 PLAYER EMBEDDING -->
+
                 </div>
-                <!-- END OF THE RADIO HTML5 PLAYER EMBEDDING -->
-
               </div>
-            </div>
-            <!-- Content -->
-          </section>
-          <!--Section: Jumbotron-->
+              <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+          </div>
+
+          <!-- Twitter Embeed Information -->
+          <div class="col-md-4 col-12 mb-2">
+            <section id="twitter" class="mb-2">
+              <a class="twitter-timeline" data-lang="en" data-height="318" data-theme="light" href="https://twitter.com/RadioArindo?ref_src=twsrc%5Etfw">
+                Tweets by Radio Arindo
+              </a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </section>
+
+            <section class="mb-3">
+              <h4 class="">Hubungi kami melalui</h4>
+              <a href="https://t.me/radioarindo" target="_blank">
+                <button class="btn btn-info btn btn-rounded-edge px-4"><i class="fab fa-telegram fa-lg mr-1"></i> Telegram</button>
+              </a>
+              <button class="btn btn-success btn btn-rounded-edge px-4" disabled><i class="fab fa-whatsapp fa-lg mr-1"></i> Coming Soon</button>
+            </section>
+          </div>
+
         </div>
 
-        <!-- Twitter Embeed Information -->
-        <div class="col-md-4 col-12 mb-2">
-          <section id="twitter" class="mb-2">
-            <a class="twitter-timeline" data-lang="en" data-height="318" data-theme="light" href="https://twitter.com/RadioArindo?ref_src=twsrc%5Etfw">
-              Tweets by Radio Arindo
-            </a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </section>
-
-          <section>
-            <h4 class="">Hubungi kami melalui</h4>
-            <a href="https://t.me/radioarindo" target="_blank">
-              <button class="btn btn-info btn btn-rounded-edge px-4"><i class="fab fa-telegram fa-lg mr-1"></i> Telegram</button>
-              <!-- <button class="btn btn-success btn btn-rounded-edge px-4"><i class="fab fa-whatsapp fa-lg mr-1"></i> Whatsapp</button> -->
-            </a>
-          </section>
-
+        <div class="row mt-1">
+          <div class="col-md-2 col-6 rgba-black-strong btn-rounded-left p-2 offset-3">
+            <p class="white-text text-center m-0">Current Listener</p>
+          </div>
+          <div class="rgba-pink-strong btn-rounded-right py-2 mr-auto" style="width:50px">
+            <p class="white-text text-center m-0">101</p>
+          </div>
         </div>
+      </section>
 
-
-
-      </div>
-
-      <!--Section: Cards-->
+      <!--Section: Cards : SPONSOR -->
       <section class="pt-5">
-
         <!-- Heading & Description -->
         <div class="wow fadeIn">
           <!--Section heading-->
@@ -326,56 +333,58 @@
         </div>
       </section>
 
-    </main>
-    <!--Main layout-->
+    </div>
+    <!-- END of container -->
+  </main>
+  <!--Main layout-->
 
-    <!--Footer-->
-    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4">
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4">
 
-      <!--Copyright-->
-      <div class="footer-copyright py-3">
-        © 2020 Copyright
-        <a href="https://arindo.net/" target="_blank"> PT. Arindo Pratama </a>
-      </div>
-      <!--/.Copyright-->
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 Copyright
+      <a href="https://arindo.net/" target="_blank"> PT. Arindo Pratama </a>
+    </div>
+    <!--/.Copyright-->
 
-    </footer>
-    <!--/.Footer-->
+  </footer>
+  <!--/.Footer-->
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Initializations -->
-    <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-    </script>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+  // Animations initialization
+  new WOW().init();
+  </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script crossorigin="anonymous">
-    setInterval(ajaxCall, 5000); //5 sec
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script crossorigin="anonymous">
+  setInterval(ajaxCall, 5000); //5 sec
 
-    function ajaxCall() {
-      $.ajax({
-        url : 'playing.php',
-        type : 'GET',
-        success : function (result) {
-          console.log (result); // Here, you need to use response by PHP file.
-          document.getElementById('radio_text').innerText = result;
-        },
-        error : function () {
-          console.log ('error');
-        }
-      });
-    }
-    </script>
+  function ajaxCall() {
+    $.ajax({
+      url : 'playing.php',
+      type : 'GET',
+      success : function (result) {
+        console.log (result); // Here, you need to use response by PHP file.
+        document.getElementById('radio_text').innerText = result;
+      },
+      error : function () {
+        console.log ('error');
+      }
+    });
+  }
+  </script>
 
-  </body>
+</body>
 
-  </html>
+</html>
