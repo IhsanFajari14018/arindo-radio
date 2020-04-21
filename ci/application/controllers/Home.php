@@ -56,8 +56,8 @@ class Home extends CI_Controller {
   * Called by AJAX with setInterval
   */
   public function getCurrentListener(){
-    $this->load->model("m_server");
-    $result = $this->m_server->getStatus();
+    $this->load->model("M_server");
+    $result = $this->M_server->getStatus();
     echo $result['listeners'];
   }
 
