@@ -373,7 +373,7 @@
 
   function currentPlaying() {
     $.ajax({
-      url : 'http://localhost/arindo-radio/ci/index.php/Home/getCurrentPlaying',
+      url : '<?php echo base_url() ?>index.php/Home/getCurrentPlaying',
       type : 'GET',
       success : function (result) {
         console.log (result); // Here, you need to use response by PHP file.
@@ -387,7 +387,7 @@
 
   function currentListener() {
     $.ajax({
-      url : 'http://localhost/arindo-radio/ci/index.php/Home/getCurrentListener',
+      url : '<?php echo base_url() ?>index.php/Home/getCurrentListener',
       type : 'GET',
       success : function (result) {
         console.log (result); // Here, you need to use response by PHP file.
