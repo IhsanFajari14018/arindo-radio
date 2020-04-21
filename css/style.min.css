@@ -23,6 +23,20 @@ html{
   -webkit-border-radius: 50px;
 }
 
+.btn-rounded-left{
+  border-radius: 200px 0px 0px 200px;
+  -moz-border-radius: 200px 0px 0px 200px;
+  -webkit-border-radius: 200px 0px 0px 200px;
+  border: 0px solid #000000;
+}
+
+.btn-rounded-right{
+  border-radius: 0px 200px 200px 0px;
+  -moz-border-radius: 0px 200px 200px 0px;
+  -webkit-border-radius: 0px 200px 200px 0px;
+  border: 0px solid #000000;
+}
+
 @media only screen and (max-width:768px){
   .navbar{
     background-color:#1C2331
