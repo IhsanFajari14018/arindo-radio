@@ -101,11 +101,15 @@
             <div class="card-body text-white text-center py-4 px-5 my-5">
 
 
-              <img src="img/assets/logo-web3.png" height="200" alt="mdb logo">
+              <img src="img/assets/logo-web3.png" height="200" alt="radio arindo logo">
               <h1 class="mb-1">
                 <!-- <strong>Radio Arindo</strong> -->
               </h1>
+<<<<<<< Updated upstream
               <p class="mb-5 font-italic">
+=======
+              <p class="mb-3 font-italic">
+>>>>>>> Stashed changes
                 Mari mendengarkan lagu-lagu favorit Anda
               </p>
 
@@ -116,9 +120,17 @@
                 <!-- <iframe src="http://rs-ap.id:8000/stream?type=.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> -->
 
                 <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
+<<<<<<< Updated upstream
                 <audio controls="true" preload="none">
                   <!-- <audio controls autoplay hidden> -->
                   <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/>
+=======
+                <audio id="audio" crossorigin="anonymous" onplay="audio_visualizer()" controls="true" preload="none">
+                <!-- <audio id="audio" controls="true" preload="none"> -->
+                  <source src="audio/sample.mp3" type="audio/mp3"/>
+                  <!-- <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                  <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
+>>>>>>> Stashed changes
                   <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
                   Your browser does not support the audio element.
                 </audio>
@@ -354,8 +366,8 @@
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-    // setInterval(ajaxCall, 5000); //5 sec
+    <script crossorigin="anonymous">
+    setInterval(ajaxCall, 5000); //5 sec
 
     function ajaxCall() {
       $.ajax({
