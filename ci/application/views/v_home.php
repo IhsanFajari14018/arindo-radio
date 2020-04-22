@@ -119,10 +119,10 @@
 
                   <!-- START OF THE RADIO HTML5 PLAYER EMBEDDING FROM ICECAST-->
 
-                  <audio id="audio" crossorigin="anonymous" onplay="audio_visualizer()" controls="true" preload="none">
-                    <!-- <audio id="audio" controls="true" preload="none"> -->
-                    <source src="audio/sample.mp3" type="audio/mp3"/>
-                    <!-- <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/> -->
+                  <!-- <audio id="audio" crossorigin="anonymous" onplay="audio_visualizer()" controls="true" preload="none"> -->
+                    <audio id="audio" controls="true" preload="none">
+                    <!-- <source src="audio/sample.mp3" type="audio/mp3"/> -->
+                    <source src="http://rs-ap.id:8000/stream?type=.mp3" type="audio/mp3"/>
                     <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
                     <!-- <source src="http://1.1.50.239:8000/stream?type=.mp3" type="audio/mp3"/> -->
                     Your browser does not support the audio element.
